@@ -105,7 +105,7 @@ class MultivariateGaussianMixture(RandomVariable):
             if np.isnan(coef).any():
                 self.parameter["coef"] = np.ones(self.n_components) / self.n_components
             elif not np.allclose(coef.sum(), 1):
-                raise ValueError(f"sum of coef must be equal to 1 {coef}")
+                raise ValueError("sum of coef must be equal to 1 {coef}")
             self.parameter["coef"] = coef
         elif coef is None:
             self.parameter["coef"] = None

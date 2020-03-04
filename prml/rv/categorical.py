@@ -41,7 +41,7 @@ class Categorical(RandomVariable):
             self.parameter["mu"] = mu
         else:
             if mu is not None:
-                raise TypeError(f"{type(mu)} is not supported for mu")
+                raise TypeError("{type(mu)} is not supported for mu")
             self.parameter["mu"] = None
 
     @property

@@ -10,26 +10,26 @@ class RandomVariable(object):
         self.parameter = {}
 
     def __repr__(self):
-        string = f"{self.__class__.__name__}(\n"
+        string = "{self.__class__.__name__}(\n"
         for key, value in self.parameter.items():
             string += (" " * 4)
             if isinstance(value, RandomVariable):
-                string += f"{key}={value:8}"
+                string += "{key}={value:8}"
             else:
-                string += f"{key}={value}"
+                string += "{key}={value}"
             string += "\n"
         string += ")"
         return string
 
     def __format__(self, indent="4"):
         indent = int(indent)
-        string = f"{self.__class__.__name__}(\n"
+        string = "{self.__class__.__name__}(\n"
         for key, value in self.parameter.items():
             string += (" " * indent)
             if isinstance(value, RandomVariable):
-                string += f"{key}=" + value.__format__(str(indent + 4))
+                string += "{key}=" + value.__format__(str(indent + 4))
             else:
-                string += f"{key}={value}"
+                string += "{key}={value}"
             string += "\n"
         string += (" " * (indent - 4)) + ")"
         return string

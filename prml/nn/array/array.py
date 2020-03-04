@@ -15,7 +15,7 @@ class Array(object):
         self.is_in_queue = False
 
     def __repr__(self):
-        return f"Array(shape={self.value.shape}, dtype={self.value.dtype})"
+        return "Array(shape={self.value.shape}, dtype={self.value.dtype})"
 
     @property
     def ndim(self):

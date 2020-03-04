@@ -47,7 +47,7 @@ class Gamma(RandomVariable):
             self.parameter["a"] = a
         else:
             if a is not None:
-                raise TypeError(f"{type(a)} is not supported for a")
+                raise TypeError("{type(a)} is not supported for a")
             self.parameter["a"] = None
 
     @property
@@ -66,7 +66,7 @@ class Gamma(RandomVariable):
             self.parameter["b"] = b
         else:
             if b is not None:
-                raise TypeError(f"{type(b)} is not supported for b")
+                raise TypeError("{type(b)} is not supported for b")
             self.parameter["b"] = None
 
     @property

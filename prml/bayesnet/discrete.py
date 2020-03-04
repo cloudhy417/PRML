@@ -35,11 +35,11 @@ class DiscreteVariable(RandomVariable):
         self.is_observed = False
 
     def __repr__(self):
-        string = f"DiscreteVariable("
+        string = "DiscreteVariable("
         if self.is_observed:
-            string += f"observed={self.proba})"
+            string += "observed={self.proba})"
         else:
-            string += f"proba={self.proba})"
+            string += "proba={self.proba})"
         return string
 
     def add_parent(self, parent):
